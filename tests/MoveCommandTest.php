@@ -1,16 +1,18 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Tests;
 
 use App\MovableInterface;
-use App\Move;
+use App\MoveCommand;
 use App\Vector;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \App\Move
+ * @covers \App\MoveCommand
  */
-class MoveTest extends TestCase
+class MoveCommandTest extends TestCase
 {
     public function testObjectCanBeMoved(): void
     {
@@ -25,7 +27,7 @@ class MoveTest extends TestCase
             ->method('setPosition')
             ->with(new Vector(5, 8));
 
-        $move = new Move($movable);
+        $move = new MoveCommand($movable);
         $move->execute();
     }
 
@@ -37,7 +39,7 @@ class MoveTest extends TestCase
 
         $this->expectException(\Exception::class);
 
-        $move = new Move($movable);
+        $move = new MoveCommand($movable);
         $move->execute();
     }
 
@@ -55,7 +57,7 @@ class MoveTest extends TestCase
 
         $this->expectException(\Exception::class);
 
-        $move = new Move($movable);
+        $move = new MoveCommand($movable);
         $move->execute();
     }
 
@@ -70,7 +72,7 @@ class MoveTest extends TestCase
 
         $this->expectException(\Exception::class);
 
-        $move = new Move($movable);
+        $move = new MoveCommand($movable);
         $move->execute();
     }
 }
