@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace App\Tests;
+namespace App\Tests\Command;
 
+use App\Command\MoveCommand;
 use App\MovableInterface;
-use App\MoveCommand;
 use App\Vector;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \App\MoveCommand
+ * @covers \App\Command\MoveCommand
  */
 class MoveCommandTest extends TestCase
 {

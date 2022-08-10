@@ -2,6 +2,10 @@
 
 namespace App;
 
+use App\Command\CommandInterface;
+use App\Command\FirstRetryCommand;
+use App\Command\LogCommand;
+use App\Command\SecondRetryCommand;
 use Ds\Queue;
 
 class ExceptionHandler

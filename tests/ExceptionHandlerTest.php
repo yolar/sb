@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace App\Tests;
 
-use App\CommandInterface;
+use App\Command\CommandInterface;
+use App\Command\FirstRetryCommand;
+use App\Command\LogCommand;
+use App\Command\SecondRetryCommand;
 use App\ExceptionHandler;
-use App\FirstRetryCommand;
-use App\LogCommand;
-use App\SecondRetryCommand;
 use Ds\Queue;
 use PHPUnit\Framework\TestCase;
 

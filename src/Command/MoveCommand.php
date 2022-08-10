@@ -2,7 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App;
+namespace App\Command;
+
+use App\MovableInterface;
+use App\Vector;
 
 class MoveCommand implements CommandInterface
 {

@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App;
+namespace App\Command;
 
 use App\Exception\CommandException;
+use App\FuelInterface;
 
 class CheckFuelCommand implements CommandInterface
 {

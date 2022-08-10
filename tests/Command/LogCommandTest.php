@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\Tests;
+namespace App\Tests\Command;
 
-use App\LogCommand;
+use App\Command\LogCommand;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \App\LogCommand
+ * @covers \App\Command\LogCommand
  */
 class LogCommandTest extends TestCase
 {

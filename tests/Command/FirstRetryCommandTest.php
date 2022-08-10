@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace App\Tests;
+namespace App\Tests\Command;
 
-use App\CommandInterface;
-use App\SecondRetryCommand;
+use App\Command\CommandInterface;
+use App\Command\FirstRetryCommand;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \App\SecondRetryCommand
+ * @covers \App\Command\FirstRetryCommand
  */
-class SecondRetryCommandTest extends TestCase
+class FirstRetryCommandTest extends TestCase
 {
     public function testExecute(): void
     {
@@ -19,6 +19,6 @@ class SecondRetryCommandTest extends TestCase
         $command->expects($this->once())
             ->method('execute');
 
-        (new SecondRetryCommand($command))->execute();
+        (new FirstRetryCommand($command))->execute();
     }
 }

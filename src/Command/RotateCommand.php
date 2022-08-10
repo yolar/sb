@@ -2,9 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App;
+namespace App\Command;
 
-class Rotate
+use App\RotableInterface;
+
+class RotateCommand implements CommandInterface
 {
     public function __construct(
         private RotableInterface $rotable

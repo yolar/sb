@@ -2,16 +2,15 @@
 
 declare(strict_types=1);
 
-namespace App\Tests;
+namespace App\Tests\Command;
 
-use App\BurnFuelCommand;
-use App\CheckFuelCommand;
+use App\Command\CheckFuelCommand;
 use App\Exception\CommandException;
 use App\FuelInterface;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \App\CheckFuelCommand
+ * @covers \App\Command\CheckFuelCommand
  */
 class CheckFuelCommandTest extends TestCase
 {

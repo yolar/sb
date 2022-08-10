@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace App\Tests;
+namespace App\Tests\Command;
 
-use App\BurnFuelCommand;
+use App\Command\BurnFuelCommand;
 use App\FuelInterface;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \App\BurnFuelCommand
+ * @covers \App\Command\BurnFuelCommand
  */
 class BurnFuelCommandTest extends TestCase
 {

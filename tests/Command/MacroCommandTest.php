@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace App\Tests;
+namespace App\Tests\Command;
 
-use App\BurnFuelCommand;
-use App\CheckFuelCommand;
-use App\MacroCommand;
-use App\MoveCommand;
+use App\Command\BurnFuelCommand;
+use App\Command\CheckFuelCommand;
+use App\Command\MacroCommand;
+use App\Command\MoveCommand;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \App\MacroCommand
+ * @covers \App\Command\MacroCommand
  */
 class MacroCommandTest extends TestCase
 {
