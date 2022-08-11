@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Tests;
 
 use App\Command\MoveCommand;
+use App\Command\RotateCommand;
 use App\Exception\IoCException;
 use App\IoC;
 use PHPUnit\Framework\TestCase;
@@ -36,11 +37,11 @@ class IoCTest extends TestCase
         /** @psalm-suppress MixedMethodCall */
         (IoC::resolve(
             'IoC.Register',
-            'MoveStraight',
-            fn () => $this->createMock(MoveCommand::class),
+            'FastRotate',
+            fn () => $this->createMock(RotateCommand::class),
         ))->execute();
 
-        $this->assertEquals(IoC::resolve('MoveStraight'), $this->createMock(MoveCommand::class));
+        $this->assertEquals(IoC::resolve('FastRotate'), $this->createMock(RotateCommand::class));
 
         /** @psalm-suppress MixedMethodCall */
         (IoC::resolve('Scope.Create', 'Bravo'))->execute();
@@ -49,6 +50,6 @@ class IoCTest extends TestCase
 
         $this->expectException(IoCException::class);
 
-        IoC::resolve('MoveStraight');
+        IoC::resolve('FastRotate');
     }
 }
